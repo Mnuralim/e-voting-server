@@ -1,0 +1,9 @@
+steps: 
+1. run docker
+docker compose up --build
+
+2. migrate prisma
+docker compose exec app bun prisma migrate deploy
+
+3. run seeder
+docker compose exec app bun run seed
