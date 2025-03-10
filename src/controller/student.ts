@@ -19,6 +19,7 @@ export const getAllStudents = async (
       message: "Success get all students",
     });
   } catch (error) {
+    console.log(error);
     if (error instanceof ApiError) {
       next(new ApiError(error.message, error.statusCode));
     } else {
