@@ -25,6 +25,10 @@ app.use(
   })
 );
 
+app.enable('trust proxy');
+app.get('/', (req, res) => {
+  res.send({ status: 'Success', message: 'Server is running' });
+});
 app.use(`${apiVersion}/whitelist`, whitelistRouter);
 app.use(`${apiVersion}/auths`, authRouter);
 app.use(`${apiVersion}/students`, studentRouter);
