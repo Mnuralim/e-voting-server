@@ -5,8 +5,6 @@ import { ApiError, errorHandler } from "./lib/utils";
 import cookieParser from "cookie-parser";
 import { whitelistRouter } from "./routes/whitelist";
 import { authRouter } from "./routes/auth";
-import { authentication } from "./middleware/authentication";
-import { authorization } from "./middleware/auhorization";
 import { studentRouter } from "./routes/student";
 
 const app: Express = express();

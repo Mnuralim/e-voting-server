@@ -36,7 +36,10 @@ export const login = async (
   try {
     const token = await service.login(payload);
 
-    res.cookie("jwt", token);
+    res.cookie("jwt", token, {
+      httpOnly: true,
+      sameSite: "none",
+    });
     res.status(200).json({
       token,
       message: "login successful",
