@@ -25,23 +25,14 @@ app.use(
   })
 );
 
-app.enable('trust proxy');
-app.get('/', (req, res) => {
-  res.send({ status: 'Success', message: 'Server is running' });
+app.enable("trust proxy");
+app.get("/", (req, res) => {
+  res.send({ status: "Success", message: "Server is running" });
 });
 app.use(`${apiVersion}/whitelist`, whitelistRouter);
 app.use(`${apiVersion}/auths`, authRouter);
 app.use(`${apiVersion}/students`, studentRouter);
-app.get(
-  `${apiVersion}/protected`,
-  authentication,
-  authorization,
-  (req, res) => {
-    res.status(200).json({
-      message: "Protected route",
-    });
-  }
-);
+
 app.all("*", (req, res, next) => {
   next(new ApiError(`Routes does not exist`, 404));
 });
