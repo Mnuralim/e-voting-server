@@ -38,7 +38,9 @@ export const login = async (
 
     res.cookie("jwt", token, {
       httpOnly: true,
-      sameSite: "none",
+      secure: Bun.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
     });
     res.status(200).json({
       token,
@@ -79,6 +81,7 @@ export const isLoggedIn = async (
 ) => {
   try {
     const jwt = req.cookies?.jwt;
+    console.log("jwt", jwt);
     const authResult = await service.isLoggedIn(jwt);
     res.status(200).json({
       isLoggedIn: authResult,
