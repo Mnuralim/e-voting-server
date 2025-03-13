@@ -41,6 +41,7 @@ export const login = async (
       secure: Bun.env.NODE_ENV === "production",
       sameSite: "lax",
       path: "/",
+      domain: Bun.env.DOMAIN,
     });
     res.status(200).json({
       token,
@@ -81,7 +82,6 @@ export const isLoggedIn = async (
 ) => {
   try {
     const jwt = req.cookies?.jwt;
-    console.log("jwt", jwt);
     const authResult = await service.isLoggedIn(jwt);
     res.status(200).json({
       isLoggedIn: authResult,
