@@ -41,7 +41,7 @@ export const login = async (
       secure: Bun.env.NODE_ENV === "production",
       sameSite: "lax",
       path: "/",
-      domain: Bun.env.DOMAIN,
+      domain: Bun.env.NODE_ENV === "development" ? "localhost" : Bun.env.DOMAIN,
     });
     res.status(200).json({
       token,

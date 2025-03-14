@@ -16,7 +16,7 @@ import {
   sendAndConfirmTransaction,
   toWei,
 } from "thirdweb";
-import { arbitrumSepolia } from "thirdweb/chains";
+import { sepolia } from "thirdweb/chains";
 import {
   findAllStudents,
   findOneStudent,
@@ -67,11 +67,11 @@ export const whitelistAddress = async (
         attributes: [
           {
             trait_type: "faculty",
-            value: student.faculty.name,
+            value: student.faculty.name.toLowerCase(),
           },
           {
             trait_type: "program",
-            value: student.program.name,
+            value: student.program.name.toLowerCase(),
           },
         ],
       },
@@ -101,7 +101,7 @@ export const whitelistAddress = async (
 
   const txSendNative = prepareTransaction({
     to: userAddress,
-    chain: arbitrumSepolia,
+    chain: sepolia,
     client: thirdwebClient,
     value: toWei("0.001"),
   });
@@ -115,7 +115,7 @@ export const whitelistAddress = async (
 };
 
 export const bulkAccessToken = async () => {
-  const students = await findAllStudents();
+  const students = await findAllStudents({});
 
   let counter = 0;
   for (const student of students) {

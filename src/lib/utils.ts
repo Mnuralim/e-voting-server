@@ -14,7 +14,7 @@ import {
   voteContractAbi,
   voteContractAddress,
 } from "./smartcontract";
-import { arbitrumSepolia } from "thirdweb/chains";
+import { sepolia } from "thirdweb/chains";
 
 export class ApiError extends Error {
   statusCode: number;
@@ -111,7 +111,7 @@ export const getContractData = <T extends "NFT" | "VOTE">(
     const contract = getContract({
       client: thirdwebClient,
       address: nftContractAddress,
-      chain: arbitrumSepolia,
+      chain: sepolia,
       abi: nftContractABI,
     });
     return contract as ContractTypeMap[T];
@@ -119,7 +119,7 @@ export const getContractData = <T extends "NFT" | "VOTE">(
     const contract = getContract({
       client: thirdwebClient,
       address: voteContractAddress,
-      chain: arbitrumSepolia,
+      chain: sepolia,
       abi: voteContractAbi,
     });
     return contract as ContractTypeMap[T];
