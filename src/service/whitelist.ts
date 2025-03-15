@@ -84,8 +84,8 @@ export const whitelistAddress = async (
     params: [
       userAddress,
       uri,
-      student.faculty.name,
-      student.program.name,
+      student.faculty.name.toLowerCase(),
+      student.program.name.toLowerCase(),
       imageUri,
     ],
   });
