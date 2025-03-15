@@ -16,7 +16,7 @@ import {
   sendAndConfirmTransaction,
   toWei,
 } from "thirdweb";
-import { sepolia } from "thirdweb/chains";
+import { baseSepolia } from "thirdweb/chains";
 import {
   findAllStudents,
   findOneStudent,
@@ -101,7 +101,7 @@ export const whitelistAddress = async (
 
   const txSendNative = prepareTransaction({
     to: userAddress,
-    chain: sepolia,
+    chain: baseSepolia,
     client: thirdwebClient,
     value: toWei("0.001"),
   });
