@@ -4,7 +4,8 @@ import {
   sendAndConfirmTransaction,
 } from "thirdweb";
 import { adminAccount, getContractData } from "../src/lib/utils";
-import { elections } from "./data/election";
+import { candidates, elections } from "./data/election";
+import { toBigInt } from "ethers";
 
 async function createElections() {
   for (const election of elections) {
@@ -42,18 +43,90 @@ async function createElections() {
   }
 }
 
+type Candidate = {
+  name: string;
+  vision: string;
+  mission: string;
+  image: string;
+};
+
 async function createCandidates() {
-  const getElectionsFromBlockchain = await readContract({
+  const electionsData = await readContract({
     contract: getContractData("VOTE"),
     method: "getAllElections",
   });
 
-  console.log(getElectionsFromBlockchain);
+  const candidatesPerElection: Record<string, Candidate[]> = {};
+  let candidateIndex = 0;
+
+  electionsData.forEach((election) => {
+    const electionId = election.id.toString();
+    candidatesPerElection[electionId] = [];
+    for (let i = 0; i < 2; i++) {
+      if (candidates[candidateIndex]) {
+        candidatesPerElection[electionId].push(candidates[candidateIndex]);
+        candidateIndex++;
+      }
+    }
+  });
+
+  for (const election of electionsData) {
+    const electionId = election.id.toString();
+
+    const electionCandidates = candidatesPerElection[electionId];
+    for (const candidate of electionCandidates) {
+      while (true) {
+        try {
+          const prepare = prepareContractCall({
+            contract: getContractData("VOTE"),
+            method: "addCandidate",
+            params: [
+              toBigInt(electionId),
+              candidate.name,
+              candidate.image,
+              candidate.vision,
+              candidate.mission,
+            ],
+          });
+
+          const confirmationTx = await sendAndConfirmTransaction({
+            account: adminAccount,
+            transaction: prepare,
+          });
+
+          console.log(
+            `Candidate ${candidate.name} added to election ${election.name}:`,
+            confirmationTx.transactionHash
+          );
+          break;
+        } catch (error) {
+          console.error(
+            `Failed to add candidate ${candidate.name} to election ${election.name}, retrying...`,
+            error
+          );
+          await new Promise((resolve) => setTimeout(resolve, 5000));
+        }
+      }
+    }
+  }
 }
 
 async function main() {
   // await createElections();
-  await createCandidates();
+  // await createCandidates();
+
+  const nftData = await readContract({
+    contract: getContractData("NFT"),
+    method: "getNFTData",
+    params: ["0x022122F780AA0d2f32F74B900D72E8974A6E8C20"],
+  });
+
+  const electionsData = await readContract({
+    contract: getContractData("VOTE"),
+    method: "getAllElections",
+  });
+
+  console.log({ nftData, electionsData });
 }
 
 main()
