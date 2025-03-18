@@ -114,19 +114,6 @@ async function createCandidates() {
 async function main() {
   await createElections();
   await createCandidates();
-
-  const nftData = await readContract({
-    contract: getContractData("NFT"),
-    method: "getNFTData",
-    params: ["0x022122F780AA0d2f32F74B900D72E8974A6E8C20"],
-  });
-
-  const electionsData = await readContract({
-    contract: getContractData("VOTE"),
-    method: "getAllElections",
-  });
-
-  console.log({ nftData, electionsData });
 }
 
 main()
