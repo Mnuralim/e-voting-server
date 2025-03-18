@@ -109,6 +109,8 @@ web_modules/
 .env.test
 .env.production
 
+script/result.ts
+
 # parcel-bundler cache (https://parceljs.org/)
 
 .parcel-cache

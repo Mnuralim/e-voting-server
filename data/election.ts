@@ -18,9 +18,9 @@ export const elections = [
     program: "",
   },
   {
-    name: "Fakultas Saintek",
+    name: "Fakultas Sains dan Teknologi",
     type: 1,
-    faculty: "fakultas saintek",
+    faculty: "fakultas sains dan teknologi",
     program: "",
   },
   {
@@ -60,10 +60,22 @@ export const elections = [
     program: "teknik sipil",
   },
   {
+    name: "Teknik Pertambangan",
+    type: 2,
+    faculty: "",
+    program: "teknik pertambangan",
+  },
+  {
     name: "Ilmu Komputer",
     type: 2,
     faculty: "",
     program: "ilmu komputer",
+  },
+  {
+    name: "Sistem Informasi",
+    type: 2,
+    faculty: "",
+    program: "sistem informasi",
   },
   {
     name: "Hukum",
@@ -78,16 +90,34 @@ export const elections = [
     program: "manajemen",
   },
   {
+    name: "Akuntansi",
+    type: 2,
+    faculty: "",
+    program: "akuntansi",
+  },
+  {
     name: "Pendidikan Matematika",
     type: 2,
     faculty: "",
     program: "pendidikan matematika",
   },
   {
+    name: "Pendidikan Kimia",
+    type: 2,
+    faculty: "",
+    program: "pendidikan kimia",
+  },
+  {
     name: "Ilmu Perikanan",
     type: 2,
     faculty: "",
     program: "ilmu perikanan",
+  },
+  {
+    name: "Ilmu Kelautan",
+    type: 2,
+    faculty: "",
+    program: "ilmu kelautan",
   },
 ];
 
@@ -337,3 +367,6 @@ export const candidates = [
 //https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg
 
 //https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg
+
+console.log(elections.length);
+console.log(candidates.length);

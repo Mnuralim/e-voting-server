@@ -12,7 +12,6 @@ import { ethers } from "ethers";
 import {
   prepareContractCall,
   prepareTransaction,
-  readContract,
   sendAndConfirmTransaction,
   toWei,
 } from "thirdweb";
@@ -50,19 +49,14 @@ export const whitelistAddress = async (
     throw new ApiError("Invalid user address.", 400);
   }
 
-  const totalMinted = await readContract({
-    contract: getContractData("NFT"),
-    method: "totalMinted",
-  });
-
   const imageUri =
     "ipfs://QmUF6KuAZR9oAxd46kSjj7PagBEeL2yrxHYjbUEaVQQvBg/30.png";
   const uri = await upload({
     client: thirdwebClient,
     files: [
       {
-        name: `WLNFT #${Number(totalMinted)}`,
-        description: "This is whitelist NFT",
+        name: `WLNFT ORMAWA USN`,
+        description: "NFT Whitelist untuk melakukan voting ORMAWA USN",
         image: imageUri,
         attributes: [
           {

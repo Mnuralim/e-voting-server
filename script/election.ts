@@ -4,7 +4,7 @@ import {
   sendAndConfirmTransaction,
 } from "thirdweb";
 import { adminAccount, getContractData } from "../src/lib/utils";
-import { candidates, elections } from "./data/election";
+import { candidates, elections } from "../data/election";
 import { toBigInt } from "ethers";
 
 async function createElections() {
