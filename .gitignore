@@ -109,7 +109,8 @@ web_modules/
 .env.test
 .env.production
 
-script/result.ts
+#
+script/
 
 # parcel-bundler cache (https://parceljs.org/)
 

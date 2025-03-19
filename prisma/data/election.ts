@@ -123,7 +123,7 @@ export const elections = [
 
 export const candidates = [
   {
-    name: "Bagas & Andi",
+    name: "Bagas & Dina",
     vision:
       "Mewujudkan lingkungan yang lebih inovatif dan harmonis bagi semua.",
     mission:
@@ -132,241 +132,315 @@ export const candidates = [
       "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
   },
   {
-    name: "Dina & Dini",
+    name: "Fahmi & Dini",
     vision: "Menjadi pelopor perubahan positif dalam komunitas.",
     mission:
       "Mengembangkan kegiatan sosial, meningkatkan kesadaran, dan memperkuat solidaritas.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/confident-hispanic-business-partners-standing-against-isolated-background.jpg",
   },
   {
-    name: "Fahmi & Reza",
+    name: "Reza & Siska",
     vision: "Membangun komunitas yang lebih maju dan inklusif.",
     mission:
       "Memajukan pendidikan, meningkatkan kesejahteraan, dan memperluas peluang bagi semua.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/young-businesspeople-working-with-laptop-white.jpg",
   },
   {
-    name: "Siska & Rina",
+    name: "Rizky & Rina",
     vision: "Menjadikan komunitas lebih ramah dan inspiratif.",
     mission:
       "Meningkatkan kesadaran sosial, mempererat hubungan, dan memperkuat empati.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/two-business-partners-giving-thumbs-up-red-wall.jpg",
   },
   {
-    name: "Rizky & Joni",
+    name: "Joni & Lina",
     vision: "Mewujudkan kepemimpinan yang transparan dan partisipatif.",
     mission:
       "Membangun komunikasi efektif, menciptakan kebijakan adil, dan mendukung pengembangan potensi.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/business-man-shows-laptop-his-colleague-office.jpg",
   },
   {
-    name: "Lina & Winda",
+    name: "Adi & Winda",
     vision: "Menghadirkan komunitas yang peduli dan berdaya.",
     mission:
       "Memperkuat rasa solidaritas, memperbanyak kegiatan sosial, dan meningkatkan inklusivitas.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/positive-confident-business-colleagues-showing-thumbs-up.jpg",
   },
   {
-    name: "Ahmad & Budi",
+    name: "Ahmad & Maya",
     vision: "Menciptakan lingkungan yang berkelanjutan dan ramah lingkungan.",
     mission:
       "Mengurangi jejak karbon, meningkatkan kesadaran lingkungan, dan mendukung proyek hijau.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-sitting-waiting-room.jpg",
   },
   {
-    name: "Maya & Rani",
+    name: "Budi & Rani",
     vision: "Membangun komunitas yang inklusif dan berdaya saing.",
     mission:
       "Meningkatkan akses pendidikan, memperkuat keterampilan, dan mendukung kewirausahaan.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/discussing-news.jpg",
   },
   {
-    name: "Doni & Eko",
+    name: "Doni & Nina",
     vision: "Mewujudkan komunitas yang mandiri dan berdaya.",
     mission:
       "Meningkatkan kesejahteraan ekonomi, memperkuat infrastruktur, dan mendukung UMKM.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/smiling-portrait-young-businessman-businesswoman-standing-back-back-office.jpg",
   },
   {
-    name: "Nina & Tari",
+    name: "Eko & Tari",
     vision: "Menjadikan komunitas lebih kreatif dan produktif.",
     mission:
       "Mendorong inovasi, meningkatkan kolaborasi, dan memperluas jaringan.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-black-suite-white-good-deal-concept.jpg",
   },
   {
-    name: "Rudi & Arif",
+    name: "Rudi & Sari",
     vision: "Membangun komunitas yang lebih sehat dan aktif.",
     mission:
       "Meningkatkan kesadaran kesehatan, mendukung olahraga, dan memperbaiki fasilitas umum.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/male-nerd-stands-near-his-beautiful-groupmate-formal-clothes.jpg",
   },
   {
-    name: "Sari & Yuni",
+    name: "Arif & Yuni",
     vision: "Menjadikan komunitas lebih harmonis dan bersatu.",
     mission:
       "Memperkuat toleransi, meningkatkan dialog, dan mendukung kerukunan.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/happy-confident-business-partners-enjoying-teamwork.jpg",
   },
   {
-    name: "Hendra & Yoga",
+    name: "Hendra & Dewi",
     vision: "Mewujudkan komunitas yang lebih cerdas dan terhubung.",
     mission:
       "Meningkatkan akses teknologi, mendukung literasi digital, dan memperluas jaringan internet.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/manager-secretary-discussing-working-thumb-up-white-background.jpg",
   },
   {
-    name: "Dewi & Ani",
+    name: "Yoga & Ani",
     vision: "Menjadikan komunitas lebih peduli dan berempati.",
     mission:
       "Meningkatkan kesadaran sosial, mendukung kegiatan amal, dan memperkuat solidaritas.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/excited-happy-young-couple-looking-camera-with-delight.jpg",
   },
   {
-    name: "Irfan & Adi",
+    name: "Irfan & Putri",
     vision: "Membangun komunitas yang lebih maju dan berdaya saing.",
     mission:
       "Meningkatkan kualitas pendidikan, mendukung inovasi, dan memperluas peluang kerja.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/smiling-businessman-holding-his-tablet-his-partner.jpg",
   },
   {
-    name: "Rina & Maya",
+    name: "Andi & Lisa",
     vision: "Menjadikan komunitas lebih ramah dan inspiratif.",
     mission:
       "Meningkatkan kesadaran sosial, mempererat hubungan, dan memperkuat empati.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-wearing-shirts-making-hand-signs-raise-their-thumbs.jpg",
   },
   {
-    name: "Rizky & Joni",
+    name: "Dimas & Ratna",
     vision: "Mewujudkan kepemimpinan yang transparan dan partisipatif.",
     mission:
       "Membangun komunikasi efektif, menciptakan kebijakan adil, dan mendukung pengembangan potensi.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/confident-hispanic-business-partners-standing-against-isolated-background.jpg",
   },
   {
-    name: "Lina & Winda",
+    name: "Ari & Indah",
     vision: "Menghadirkan komunitas yang peduli dan berdaya.",
     mission:
       "Memperkuat rasa solidaritas, memperbanyak kegiatan sosial, dan meningkatkan inklusivitas.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/young-businesspeople-working-with-laptop-white.jpg",
   },
   {
-    name: "Ahmad & Budi",
+    name: "Joko & Fitri",
     vision: "Menciptakan lingkungan yang berkelanjutan dan ramah lingkungan.",
     mission:
       "Mengurangi jejak karbon, meningkatkan kesadaran lingkungan, dan mendukung proyek hijau.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/two-business-partners-giving-thumbs-up-red-wall.jpg",
   },
   {
-    name: "Maya & Rani",
+    name: "Danang & Nadia",
     vision: "Membangun komunitas yang inklusif dan berdaya saing.",
     mission:
       "Meningkatkan akses pendidikan, memperkuat keterampilan, dan mendukung kewirausahaan.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/business-man-shows-laptop-his-colleague-office.jpg",
   },
   {
-    name: "Doni & Eko",
+    name: "Gilang & Mega",
     vision: "Mewujudkan komunitas yang mandiri dan berdaya.",
     mission:
       "Meningkatkan kesejahteraan ekonomi, memperkuat infrastruktur, dan mendukung UMKM.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/positive-confident-business-colleagues-showing-thumbs-up.jpg",
   },
   {
-    name: "Nina & Tari",
+    name: "Ferdi & Citra",
     vision: "Menjadikan komunitas lebih kreatif dan produktif.",
     mission:
       "Mendorong inovasi, meningkatkan kolaborasi, dan memperluas jaringan.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-sitting-waiting-room.jpg",
   },
   {
-    name: "Rudi & Arif",
+    name: "Galih & Vina",
     vision: "Membangun komunitas yang lebih sehat dan aktif.",
     mission:
       "Meningkatkan kesadaran kesehatan, mendukung olahraga, dan memperbaiki fasilitas umum.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/discussing-news.jpg",
   },
   {
-    name: "Sari & Yuni",
+    name: "Ridwan & Astuti",
     vision: "Menjadikan komunitas lebih harmonis dan bersatu.",
     mission:
       "Memperkuat toleransi, meningkatkan dialog, dan mendukung kerukunan.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/smiling-portrait-young-businessman-businesswoman-standing-back-back-office.jpg",
   },
   {
-    name: "Hendra & Yoga",
+    name: "Yusuf & Shinta",
     vision: "Mewujudkan komunitas yang lebih cerdas dan terhubung.",
     mission:
       "Meningkatkan akses teknologi, mendukung literasi digital, dan memperluas jaringan internet.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-black-suite-white-good-deal-concept.jpg",
   },
   {
-    name: "Dewi & Ani",
+    name: "Taufik & Intan",
     vision: "Menjadikan komunitas lebih peduli dan berempati.",
     mission:
       "Meningkatkan kesadaran sosial, mendukung kegiatan amal, dan memperkuat solidaritas.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/male-nerd-stands-near-his-beautiful-groupmate-formal-clothes.jpg",
   },
   {
-    name: "Irfan & Adi",
+    name: "Aditya & Ratu",
     vision: "Membangun komunitas yang lebih maju dan berdaya saing.",
     mission:
       "Meningkatkan kualitas pendidikan, mendukung inovasi, dan memperluas peluang kerja.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/happy-confident-business-partners-enjoying-teamwork.jpg",
   },
   {
-    name: "Rina & Maya",
+    name: "Gunawan & Laras",
     vision: "Menjadikan komunitas lebih ramah dan inspiratif.",
     mission:
       "Meningkatkan kesadaran sosial, mempererat hubungan, dan memperkuat empati.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/manager-secretary-discussing-working-thumb-up-white-background.jpg",
   },
   {
-    name: "Rizky & Joni",
+    name: "Surya & Desi",
     vision: "Mewujudkan kepemimpinan yang transparan dan partisipatif.",
     mission:
       "Membangun komunikasi efektif, menciptakan kebijakan adil, dan mendukung pengembangan potensi.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/excited-happy-young-couple-looking-camera-with-delight.jpg",
   },
   {
-    name: "Lina & Winda",
+    name: "Tono & Maria",
     vision: "Menghadirkan komunitas yang peduli dan berdaya.",
     mission:
       "Memperkuat rasa solidaritas, memperbanyak kegiatan sosial, dan meningkatkan inklusivitas.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/smiling-businessman-holding-his-tablet-his-partner.jpg",
+  },
+  {
+    name: "Bambang & Kiara",
+    vision: "Menciptakan lingkungan yang berkelanjutan dan ramah lingkungan.",
+    mission:
+      "Mengurangi jejak karbon, meningkatkan kesadaran lingkungan, dan mendukung proyek hijau.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-wearing-shirts-making-hand-signs-raise-their-thumbs.jpg",
+  },
+  {
+    name: "Dika & Rini",
+    vision: "Membangun komunitas yang inklusif dan berdaya saing.",
+    mission:
+      "Meningkatkan akses pendidikan, memperkuat keterampilan, dan mendukung kewirausahaan.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/confident-hispanic-business-partners-standing-against-isolated-background.jpg",
+  },
+  {
+    name: "Yanto & Clara",
+    vision: "Mewujudkan komunitas yang mandiri dan berdaya.",
+    mission:
+      "Meningkatkan kesejahteraan ekonomi, memperkuat infrastruktur, dan mendukung UMKM.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/young-businesspeople-working-with-laptop-white.jpg",
+  },
+  {
+    name: "Faisal & Lestari",
+    vision: "Menjadikan komunitas lebih kreatif dan produktif.",
+    mission:
+      "Mendorong inovasi, meningkatkan kolaborasi, dan memperluas jaringan.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/two-business-partners-giving-thumbs-up-red-wall.jpg",
+  },
+  {
+    name: "Rahman & Anita",
+    vision: "Membangun komunitas yang lebih sehat dan aktif.",
+    mission:
+      "Meningkatkan kesadaran kesehatan, mendukung olahraga, dan memperbaiki fasilitas umum.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/business-man-shows-laptop-his-colleague-office.jpg",
+  },
+  {
+    name: "Bima & Sandra",
+    vision: "Menjadikan komunitas lebih harmonis dan bersatu.",
+    mission:
+      "Memperkuat toleransi, meningkatkan dialog, dan mendukung kerukunan.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/positive-confident-business-colleagues-showing-thumbs-up.jpg",
+  },
+  {
+    name: "Putra & Diana",
+    vision: "Mewujudkan komunitas yang lebih cerdas dan terhubung.",
+    mission:
+      "Meningkatkan akses teknologi, mendukung literasi digital, dan memperluas jaringan internet.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-sitting-waiting-room.jpg",
+  },
+  {
+    name: "Raihan & Olivia",
+    vision: "Menjadikan komunitas lebih peduli dan berempati.",
+    mission:
+      "Meningkatkan kesadaran sosial, mendukung kegiatan amal, dan memperkuat solidaritas.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/discussing-news.jpg",
+  },
+  {
+    name: "Fajar & Tiara",
+    vision: "Membangun komunitas yang lebih maju dan berdaya saing.",
+    mission:
+      "Meningkatkan kualitas pendidikan, mendukung inovasi, dan memperluas peluang kerja.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/smiling-portrait-young-businessman-businesswoman-standing-back-back-office.jpg",
+  },
+  {
+    name: "Agus & Bella",
+    vision: "Menjadikan komunitas lebih ramah dan inspiratif.",
+    mission:
+      "Meningkatkan kesadaran sosial, mempererat hubungan, dan memperkuat empati.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-black-suite-white-good-deal-concept.jpg",
   },
 ];
-//https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg
-
-//https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmYSericuCUJvPe4CTYuooRB9wcW5dqZLjPdqkPPNVLKHx/person-gray-photo-placeholder-woman-vector-23519838.jpg
-
-console.log(elections.length);
-console.log(candidates.length);
