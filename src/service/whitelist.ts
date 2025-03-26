@@ -28,25 +28,25 @@ export const whitelistAddress = async (
   userAddress: string
 ) => {
   if (!email || !token) {
-    throw new ApiError("Email and token are required.", 400);
+    throw new ApiError("Email and token wajib diisi.", 400);
   }
 
   const student = await findOneStudent(email);
   if (!student?.accessToken) {
-    throw new ApiError("Access token not found.", 404);
+    throw new ApiError("Token tidak ditemukan.", 404);
   }
 
   const isValid = await Bun.password.verify(token, student.accessToken.token);
   if (!isValid) {
-    throw new ApiError("Invalid access token.", 400);
+    throw new ApiError("Token tidak valid.", 400);
   }
 
   if (student.accessToken.status === "used") {
-    throw new ApiError("Access token already used.", 400);
+    throw new ApiError("Token sudah digunakan.", 400);
   }
 
   if (!ethers.isAddress(userAddress)) {
-    throw new ApiError("Invalid user address.", 400);
+    throw new ApiError("Alamat wallet tidak valid.", 400);
   }
 
   const imageUri =
@@ -67,6 +67,12 @@ export const whitelistAddress = async (
             trait_type: "program",
             value: student.program.name.toLowerCase(),
           },
+          {
+            trait_type: "departement",
+            value: student.departement
+              ? student.departement.name.toLowerCase()
+              : "none",
+          },
         ],
       },
     ],
@@ -81,6 +87,7 @@ export const whitelistAddress = async (
       student.faculty.name.toLowerCase(),
       student.program.name.toLowerCase(),
       imageUri,
+      student.departement ? student.departement.name.toLowerCase() : "none",
     ],
   });
 
@@ -90,7 +97,7 @@ export const whitelistAddress = async (
   });
 
   if (txSafeMint.status === "reverted") {
-    throw new ApiError("Failed to mint whitelist NFT.", 500);
+    throw new ApiError("Gagal mint NFT.", 500);
   }
 
   const txSendNative = prepareTransaction({
@@ -144,11 +151,11 @@ export const bulkAccessToken = async () => {
 export const createAccessToken = async (studentId: string) => {
   const student = await findStudentById(studentId);
   if (!student) {
-    throw new ApiError("Student not found.", 404);
+    throw new ApiError("Mahasiswa tidak ditemukan.", 404);
   }
 
   if (student.accessToken !== null) {
-    throw new ApiError("Access token already created.", 400);
+    throw new ApiError("Access token sudah dibuat.", 400);
   }
 
   const token = Math.random().toString(36).substring(2, 15);

@@ -54,6 +54,7 @@ export const whitelistAddress = async (
       message: "Whitelisted address successfully",
     });
   } catch (error) {
+    console.log(error);
     if (error instanceof ApiError) {
       next(new ApiError(error.message, error.statusCode));
     } else {

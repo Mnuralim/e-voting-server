@@ -14,7 +14,7 @@ export const disableVoting = async (
     });
 
     if (isVotingStarted[0]) {
-      throw new ApiError("Voting has started", 400);
+      throw new ApiError("Voting sudah berlangsung", 400);
     }
 
     next();

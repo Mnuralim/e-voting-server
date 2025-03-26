@@ -2,6 +2,7 @@ import { Router } from "express";
 import {
   createStudent,
   deleteStudent,
+  getAllDepartement,
   getAllFaculty,
   getAllProgram,
   getAllStudents,
@@ -15,6 +16,7 @@ const studentRouter: Router = Router();
 studentRouter.get("/", getAllStudents);
 studentRouter.get("/faculties", getAllFaculty);
 studentRouter.get("/programs", getAllProgram);
+studentRouter.get("/departements", getAllDepartement);
 studentRouter.post("/", authentication, disableVoting, createStudent);
 studentRouter.patch("/:id", authentication, disableVoting, updateStudent);
 studentRouter.delete("/:id", authentication, disableVoting, deleteStudent);

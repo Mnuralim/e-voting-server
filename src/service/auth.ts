@@ -7,7 +7,7 @@ export const getLoginPayload = async (
   chainId: string
 ): Promise<LoginPayload> => {
   if (!address) {
-    throw new ApiError("Address is required", 400);
+    throw new ApiError("Alamat wallet wajib diisi", 400);
   }
 
   const payload = await thirdwebAuth.generatePayload({
@@ -40,7 +40,7 @@ export const login = async (
     return jwt;
   }
 
-  throw new ApiError("Failed to login", 400);
+  throw new ApiError("Gagal melakukan login", 400);
 };
 
 export const isLoggedIn = async (jwt: string): Promise<boolean> => {

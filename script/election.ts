@@ -19,6 +19,7 @@ async function createElections() {
             election.type,
             election.faculty.toLowerCase(),
             election.program.toLowerCase(),
+            election.departement ? election.departement.toLowerCase() : "",
           ],
         });
 

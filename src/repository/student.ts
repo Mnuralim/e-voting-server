@@ -43,6 +43,11 @@ export const findAllStudents = async (filters: {
           name: true,
         },
       },
+      departement: {
+        select: {
+          name: true,
+        },
+      },
     },
   });
 };
@@ -85,6 +90,7 @@ export const findOneStudent = async (email?: string, nim?: string) => {
       accessToken: true,
       faculty: true,
       program: true,
+      departement: true,
     },
   });
 };
@@ -100,12 +106,24 @@ export const findFacultyById = async (id: string) => {
   });
 };
 
+export const findDepartementById = async (id: string) => {
+  return await prisma.departement.findUnique({
+    where: {
+      id,
+    },
+    select: {
+      name: true,
+    },
+  });
+};
+
 export const createStudent = async (
   name: string,
   nim: string,
   email: string,
   programId: string,
-  facultyId: string
+  facultyId: string,
+  departementId?: string | null
 ) => {
   await prisma.student.create({
     data: {
@@ -114,6 +132,7 @@ export const createStudent = async (
       email,
       program_id: programId,
       faculty_id: facultyId,
+      departement_id: departementId,
     },
   });
 };
@@ -124,7 +143,8 @@ export const updateStudent = async (
   nim: string,
   email: string,
   programId: string,
-  facultyId: string
+  facultyId: string,
+  departementId?: string | null
 ) => {
   return await prisma.student.update({
     where: {
@@ -136,6 +156,7 @@ export const updateStudent = async (
       email,
       program_id: programId,
       faculty_id: facultyId,
+      departement_id: departementId,
     },
   });
 };
@@ -162,4 +183,8 @@ export const getAllFaculty = async () => {
 
 export const getAllProgram = async () => {
   return await prisma.program.findMany();
+};
+
+export const getAllDepartement = async () => {
+  return await prisma.departement.findMany();
 };

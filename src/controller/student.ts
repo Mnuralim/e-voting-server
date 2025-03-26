@@ -33,9 +33,16 @@ export const createStudent = async (
   res: Response,
   next: NextFunction
 ) => {
-  const { name, nim, email, programId, facultyId } = req.body;
+  const { name, nim, email, programId, facultyId, departementId } = req.body;
   try {
-    await service.createStudent(name, nim, email, programId, facultyId);
+    await service.createStudent(
+      name,
+      nim,
+      email,
+      programId,
+      facultyId,
+      departementId
+    );
     res.status(201).json({
       message: "Success create student",
     });
@@ -54,9 +61,17 @@ export const updateStudent = async (
   next: NextFunction
 ) => {
   const { id } = req.params;
-  const { name, nim, email, programId, facultyId } = req.body;
+  const { name, nim, email, programId, facultyId, departementId } = req.body;
   try {
-    await service.updateStudent(id, name, nim, email, programId, facultyId);
+    await service.updateStudent(
+      id,
+      name,
+      nim,
+      email,
+      programId,
+      facultyId,
+      departementId
+    );
     res.status(200).json({
       message: "Success update student",
     });
@@ -120,6 +135,26 @@ export const getAllProgram = async (
     res.status(200).json({
       programs,
       message: "Success get all program",
+    });
+  } catch (error) {
+    if (error instanceof ApiError) {
+      next(new ApiError(error.message, error.statusCode));
+    } else {
+      next(new ApiError("Internal server error", 500));
+    }
+  }
+};
+
+export const getAllDepartement = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const departements = await service.getAllDepartement();
+    res.status(200).json({
+      departements,
+      message: "Success get all departement",
     });
   } catch (error) {
     if (error instanceof ApiError) {

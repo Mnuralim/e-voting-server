@@ -108,16 +108,30 @@ export const elections = [
     program: "pendidikan kimia",
   },
   {
-    name: "Ilmu Perikanan",
+    name: "Agribisnis",
     type: 2,
     faculty: "",
-    program: "ilmu perikanan",
+    program: "agribisnis",
   },
   {
-    name: "Ilmu Kelautan",
+    name: "Agroteknologi",
     type: 2,
     faculty: "",
-    program: "ilmu kelautan",
+    program: "agroteknologi",
+  },
+  {
+    name: "Jurusan MIPA",
+    type: 5,
+    faculty: "",
+    program: "",
+    departement: "jurusan mipa",
+  },
+  {
+    name: "Jurusan Pertanian",
+    type: 5,
+    faculty: "",
+    program: "",
+    departement: "jurusan pertanian",
   },
 ];
 
@@ -129,7 +143,7 @@ export const candidates = [
     mission:
       "Mendorong kreativitas, meningkatkan kolaborasi, dan membangun komunikasi yang lebih baik.",
     image:
-      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmVfF3Gf7jRMxSq1g99y53RuTnXa8rNDVCgdLHprUMnWty/person-gray-photo-placeholder-man-vector-22964641.jpg",
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-wearing-shirts-making-hand-signs-raise-their-thumbs.jpg",
   },
   {
     name: "Fahmi & Dini",
@@ -442,5 +456,38 @@ export const candidates = [
       "Meningkatkan kesadaran sosial, mempererat hubungan, dan memperkuat empati.",
     image:
       "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-black-suite-white-good-deal-concept.jpg",
+  },
+  {
+    name: "Robert & Tania",
+    vision:
+      "Mewujudkan lingkungan yang lebih inovatif dan harmonis bagi semua.",
+    mission:
+      "Mendorong kreativitas, meningkatkan kolaborasi, dan membangun komunikasi yang lebih baik.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/man-woman-wearing-shirts-making-hand-signs-raise-their-thumbs.jpg",
+  },
+  {
+    name: "Fachrul & Sintia",
+    vision: "Menjadi pelopor perubahan positif dalam komunitas.",
+    mission:
+      "Mengembangkan kegiatan sosial, meningkatkan kesadaran, dan memperkuat solidaritas.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/confident-hispanic-business-partners-standing-against-isolated-background.jpg",
+  },
+  {
+    name: "Kevin & Irine",
+    vision: "Membangun komunitas yang lebih maju dan inklusif.",
+    mission:
+      "Memajukan pendidikan, meningkatkan kesejahteraan, dan memperluas peluang bagi semua.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/young-businesspeople-working-with-laptop-white.jpg",
+  },
+  {
+    name: "James & Rose",
+    vision: "Menjadikan komunitas lebih ramah dan inspiratif.",
+    mission:
+      "Meningkatkan kesadaran sosial, mempererat hubungan, dan memperkuat empati.",
+    image:
+      "https://715e18ea7a4b45c99b992e34fe0676c0.ipfscdn.io/ipfs/QmY47gitpyU7Eor5QHAwXEecUKZqSowWp4LqvbDo2fg7YX/two-business-partners-giving-thumbs-up-red-wall.jpg",
   },
 ];
