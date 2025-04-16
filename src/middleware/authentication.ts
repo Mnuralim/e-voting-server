@@ -1,5 +1,10 @@
 import type { NextFunction, Request, Response } from "express";
-import { ApiError, thirdwebAuth } from "../lib/utils";
+import {
+  ApiError,
+  getContractData,
+  getRoleName,
+  thirdwebAuth,
+} from "../lib/utils";
 
 export const authentication = async (
   req: Request,
@@ -15,16 +20,18 @@ export const authentication = async (
     }
 
     if (!jwt) {
-      throw new ApiError("Unauthorized", 401);
+      throw new ApiError("Akses tidak diizinkan", 401);
     }
     const authResult = await thirdwebAuth.verifyJWT({ jwt });
     if (!authResult.valid) {
-      throw new ApiError("Unauthorized", 401);
+      throw new ApiError("Akses tidak diizinkan", 401);
     }
 
-    //@ts-ignore
+    const role = await getRoleName(authResult.parsedJWT.sub);
+
     req.user = {
       address: authResult.parsedJWT.sub,
+      role,
     };
     next();
   } catch (error) {

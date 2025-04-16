@@ -8,7 +8,7 @@ export const bulkAccessToken = async (
   next: NextFunction
 ) => {
   try {
-    await service.bulkAccessToken();
+    await service.bulkAccessToken(req.user?.role!);
     res.status(200).json({
       message: "Generated bulk access token successfully",
     });
@@ -28,7 +28,7 @@ export const generateAccessToken = async (
 ) => {
   const { id } = req.params;
   try {
-    await service.createAccessToken(id);
+    await service.createAccessToken(id, req.user?.role!);
     res.status(200).json({
       message: "Generated access token successfully",
     });

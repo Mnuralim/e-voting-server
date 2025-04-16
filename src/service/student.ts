@@ -1,5 +1,8 @@
-import { ApiError } from "../lib/utils";
+import { readContract } from "thirdweb";
+import { ApiError, getContractData } from "../lib/utils";
 import * as repository from "../repository/student";
+import { prisma } from "../db";
+import type { ElectionVoterCount } from "../../types";
 
 export const getAllStudents = async (filters: {
   search?: string;
@@ -146,4 +149,88 @@ export const getAllProgram = async () => {
 
 export const getAllDepartement = async () => {
   return repository.getAllDepartement();
+};
+
+export const getStudentsCount = async () => {
+  const elections = await readContract({
+    contract: getContractData("VOTE"),
+    method: "getAllElections",
+  });
+
+  const voterCounts: ElectionVoterCount = {};
+
+  for (let i = 0; i < elections.length; i++) {
+    const election = elections[i];
+    let query: any = {};
+
+    if (election.electionType === 3) {
+      if (election.dpm && election.dpm !== "") {
+        const faculty = await prisma.faculty.findFirst({
+          where: {
+            name: {
+              mode: "insensitive",
+              equals: election.dpm,
+            },
+          },
+        });
+
+        if (faculty) {
+          query.faculty_id = faculty.id;
+        }
+      }
+    } else {
+      if (election.faculty && election.faculty !== "") {
+        const faculty = await prisma.faculty.findFirst({
+          where: {
+            name: {
+              mode: "insensitive",
+              equals: election.faculty,
+            },
+          },
+        });
+
+        if (faculty) {
+          query.faculty_id = faculty.id;
+        }
+      }
+
+      if (election.program && election.program !== "") {
+        const program = await prisma.program.findFirst({
+          where: {
+            name: {
+              mode: "insensitive",
+              equals: election.program,
+            },
+          },
+        });
+
+        if (program) {
+          query.program_id = program.id;
+        }
+      }
+
+      if (election.departement && election.departement !== "") {
+        const departement = await prisma.departement.findFirst({
+          where: {
+            name: {
+              mode: "insensitive",
+              equals: election.departement,
+            },
+          },
+        });
+
+        if (departement) {
+          query.departement_id = departement.id;
+        }
+      }
+    }
+
+    const count = await prisma.student.count({
+      where: query,
+    });
+
+    voterCounts[i.toString()] = count;
+  }
+
+  return voterCounts;
 };

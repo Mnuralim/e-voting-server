@@ -3,6 +3,7 @@ import nodemailer from "nodemailer";
 import {
   createThirdwebClient,
   getContract,
+  readContract,
   type ContractOptions,
 } from "thirdweb";
 import { createAuth } from "thirdweb/auth";
@@ -156,4 +157,46 @@ export const generateEmailMessage = (studentName: string, token: string) => {
     emailHtml,
     emailText,
   };
+};
+
+const roles = [
+  "none",
+  "KPURM_UNIVERSITY",
+  "PAWASRA",
+  "fakultas sains dan teknologi",
+  "fakultas teknologi informasi",
+  "fakultas ilmu sosial dan politik",
+  "fakultas keguruan dan ilmu pendidikan",
+  "fakultas pertanian, perikanan dan peternakan",
+  "fakultas hukum",
+];
+
+export const getRoleName = async (address: string) => {
+  const owner = await readContract({
+    contract: getContractData("VOTE"),
+    method: "admin",
+  });
+  const getRole = await readContract({
+    contract: getContractData("VOTE"),
+    method: "userRoles",
+    params: [address],
+  });
+
+  if (address === owner) {
+    return "admin";
+  }
+
+  const roles = [
+    "none",
+    "KPURM_UNIVERSITY",
+    "PAWASRA",
+    "fakultas sains dan teknologi",
+    "fakultas teknologi informasi",
+    "fakultas ilmu sosial dan politik",
+    "fakultas keguruan dan ilmu pendidikan",
+    "fakultas pertanian, perikanan dan peternakan",
+    "fakultas hukum",
+  ];
+
+  return roles[parseInt(getRole.toString())];
 };

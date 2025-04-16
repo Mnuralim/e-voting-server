@@ -48,9 +48,7 @@ export const whitelistAddress = async (
   if (!ethers.isAddress(userAddress)) {
     throw new ApiError("Alamat wallet tidak valid.", 400);
   }
-
-  const imageUri =
-    "ipfs://QmUF6KuAZR9oAxd46kSjj7PagBEeL2yrxHYjbUEaVQQvBg/30.png";
+  const imageUri = "ipfs://QmQaiRSDCNapVTkEQ3QFBkcfx78yBaZ6FroWSQP6AFUeYP/0";
   const uri = await upload({
     client: thirdwebClient,
     files: [
@@ -73,6 +71,10 @@ export const whitelistAddress = async (
               ? student.departement.name.toLowerCase()
               : "none",
           },
+          {
+            trait_type: "dpm",
+            value: student.faculty.name.toLowerCase(),
+          },
         ],
       },
     ],
@@ -88,6 +90,7 @@ export const whitelistAddress = async (
       student.program.name.toLowerCase(),
       imageUri,
       student.departement ? student.departement.name.toLowerCase() : "none",
+      student.faculty.name.toLowerCase(),
     ],
   });
 
@@ -104,7 +107,7 @@ export const whitelistAddress = async (
     to: userAddress,
     chain: baseSepolia,
     client: thirdwebClient,
-    value: toWei("0.001"),
+    value: toWei("0.0005"),
   });
 
   await sendAndConfirmTransaction({
@@ -115,11 +118,14 @@ export const whitelistAddress = async (
   await repository.updateAccessTokenToUsed(email);
 };
 
-export const bulkAccessToken = async () => {
+export const bulkAccessToken = async (role: string) => {
   const students = await findAllStudents({});
 
   let counter = 0;
   for (const student of students) {
+    if (role !== "admin" && role !== student.faculty.name.toLowerCase()) {
+      throw new ApiError("Role tidak valid.", 400);
+    }
     const token = Math.random().toString(36).substring(2, 15);
     const tokenHash = await Bun.password.hash(token, {
       cost: 10,
@@ -148,10 +154,18 @@ export const bulkAccessToken = async () => {
   console.log(`${counter} access tokens sent.`);
 };
 
-export const createAccessToken = async (studentId: string) => {
+export const createAccessToken = async (studentId: string, role: string) => {
   const student = await findStudentById(studentId);
   if (!student) {
     throw new ApiError("Mahasiswa tidak ditemukan.", 404);
+  }
+
+  if (
+    role !== "admin" &&
+    role !== "KPURM_UNIVERSITY" &&
+    role !== student.faculty.name.toLowerCase()
+  ) {
+    throw new ApiError("Role tidak valid.", 400);
   }
 
   if (student.accessToken !== null) {

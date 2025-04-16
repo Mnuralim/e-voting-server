@@ -70,6 +70,7 @@ export const findStudentById = async (id: string) => {
     },
     include: {
       accessToken: true,
+      faculty: true,
     },
   });
 };

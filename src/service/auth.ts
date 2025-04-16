@@ -28,11 +28,20 @@ export const login = async (
       method: "admin",
     });
 
+    const getRole = await readContract({
+      contract: getContractData("VOTE"),
+      method: "userRoles",
+      //@ts-ignore
+      params: [verifiedPayload.payload.address as string],
+    });
+
     const jwt = await thirdwebAuth.generateJWT({
       payload: verifiedPayload.payload,
       context: {
         role:
-          owner.toLowerCase() === verifiedPayload.payload.address.toLowerCase()
+          owner.toLowerCase() ===
+            verifiedPayload.payload.address.toLowerCase() ||
+          (getRole > 0 && getRole <= 8)
             ? "admin"
             : "user",
       },

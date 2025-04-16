@@ -164,3 +164,23 @@ export const getAllDepartement = async (
     }
   }
 };
+
+export const getStudentsCount = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const count = await service.getStudentsCount();
+    res.status(200).json({
+      count,
+      message: "Success get students count",
+    });
+  } catch (error) {
+    if (error instanceof ApiError) {
+      next(new ApiError(error.message, error.statusCode));
+    } else {
+      next(new ApiError("Internal server error", 500));
+    }
+  }
+};

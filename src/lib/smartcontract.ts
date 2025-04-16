@@ -196,6 +196,11 @@ export const nftContractABI = [
       },
       {
         internalType: "string",
+        name: "dpm",
+        type: "string",
+      },
+      {
+        internalType: "string",
         name: "image",
         type: "string",
       },
@@ -314,6 +319,11 @@ export const nftContractABI = [
       {
         internalType: "string",
         name: "departement",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "dpm",
         type: "string",
       },
     ],
@@ -544,6 +554,17 @@ export const voteContractAbi = [
     type: "error",
   },
   {
+    inputs: [
+      {
+        internalType: "enum ElectionVote.Role",
+        name: "role",
+        type: "uint8",
+      },
+    ],
+    name: "InvalidRole",
+    type: "error",
+  },
+  {
     inputs: [],
     name: "InvalidSignature",
     type: "error",
@@ -636,49 +657,6 @@ export const voteContractAbi = [
         type: "uint256",
       },
       {
-        indexed: true,
-        internalType: "uint256",
-        name: "candidateId",
-        type: "uint256",
-      },
-      {
-        indexed: false,
-        internalType: "string",
-        name: "name",
-        type: "string",
-      },
-      {
-        indexed: false,
-        internalType: "string",
-        name: "image",
-        type: "string",
-      },
-      {
-        indexed: false,
-        internalType: "string",
-        name: "vision",
-        type: "string",
-      },
-      {
-        indexed: false,
-        internalType: "string",
-        name: "mission",
-        type: "string",
-      },
-    ],
-    name: "CandidateUpdated",
-    type: "event",
-  },
-  {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: true,
-        internalType: "uint256",
-        name: "electionId",
-        type: "uint256",
-      },
-      {
         indexed: false,
         internalType: "string",
         name: "name",
@@ -708,6 +686,12 @@ export const voteContractAbi = [
         name: "departement",
         type: "string",
       },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "dpm",
+        type: "string",
+      },
     ],
     name: "ElectionCreated",
     type: "event",
@@ -729,6 +713,25 @@ export const voteContractAbi = [
       },
     ],
     name: "GlobalVotingStarted",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "enum ElectionVote.Role",
+        name: "role",
+        type: "uint8",
+      },
+    ],
+    name: "RoleAssigned",
     type: "event",
   },
   {
@@ -805,6 +808,24 @@ export const voteContractAbi = [
   {
     inputs: [
       {
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+      {
+        internalType: "enum ElectionVote.Role",
+        name: "role",
+        type: "uint8",
+      },
+    ],
+    name: "assignRole",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
         internalType: "string",
         name: "name",
         type: "string",
@@ -827,6 +848,11 @@ export const voteContractAbi = [
       {
         internalType: "string",
         name: "departement",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "dpm",
         type: "string",
       },
     ],
@@ -886,6 +912,16 @@ export const voteContractAbi = [
       {
         internalType: "string",
         name: "departement",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "dpm",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "kpurmFaculty",
         type: "string",
       },
       {
@@ -990,6 +1026,94 @@ export const voteContractAbi = [
             type: "string",
           },
           {
+            internalType: "string",
+            name: "dpm",
+            type: "string",
+          },
+          {
+            internalType: "string",
+            name: "kpurmFaculty",
+            type: "string",
+          },
+          {
+            internalType: "uint256",
+            name: "candidateCount",
+            type: "uint256",
+          },
+        ],
+        internalType: "struct ElectionVote.ElectionView[]",
+        name: "",
+        type: "tuple[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getAllUsersWithRoles",
+    outputs: [
+      {
+        internalType: "address[]",
+        name: "users",
+        type: "address[]",
+      },
+      {
+        internalType: "enum ElectionVote.Role[]",
+        name: "roles",
+        type: "uint8[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getElectionsByRole",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "id",
+            type: "uint256",
+          },
+          {
+            internalType: "string",
+            name: "name",
+            type: "string",
+          },
+          {
+            internalType: "enum ElectionVote.ElectionType",
+            name: "electionType",
+            type: "uint8",
+          },
+          {
+            internalType: "string",
+            name: "faculty",
+            type: "string",
+          },
+          {
+            internalType: "string",
+            name: "program",
+            type: "string",
+          },
+          {
+            internalType: "string",
+            name: "departement",
+            type: "string",
+          },
+          {
+            internalType: "string",
+            name: "dpm",
+            type: "string",
+          },
+          {
+            internalType: "string",
+            name: "kpurmFaculty",
+            type: "string",
+          },
+          {
             internalType: "uint256",
             name: "candidateCount",
             type: "uint256",
@@ -1046,6 +1170,25 @@ export const voteContractAbi = [
         internalType: "struct ElectionVote.WhitelistInfo[]",
         name: "",
         type: "tuple[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+    ],
+    name: "getRole",
+    outputs: [
+      {
+        internalType: "enum ElectionVote.Role",
+        name: "",
+        type: "uint8",
       },
     ],
     stateMutability: "view",
@@ -1146,19 +1289,6 @@ export const voteContractAbi = [
   {
     inputs: [
       {
-        internalType: "string",
-        name: "_version",
-        type: "string",
-      },
-    ],
-    name: "setVersion",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
         internalType: "uint256",
         name: "duration",
         type: "uint256",
@@ -1172,49 +1302,17 @@ export const voteContractAbi = [
   {
     inputs: [
       {
-        internalType: "uint256",
-        name: "electionId",
-        type: "uint256",
-      },
-      {
-        internalType: "uint256",
-        name: "candidateId",
-        type: "uint256",
-      },
-      {
-        internalType: "string",
-        name: "name",
-        type: "string",
-      },
-      {
-        internalType: "string",
-        name: "image",
-        type: "string",
-      },
-      {
-        internalType: "string",
-        name: "vision",
-        type: "string",
-      },
-      {
-        internalType: "string",
-        name: "mission",
-        type: "string",
+        internalType: "address",
+        name: "",
+        type: "address",
       },
     ],
-    name: "updateCandidate",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "version",
+    name: "userRoles",
     outputs: [
       {
-        internalType: "string",
+        internalType: "enum ElectionVote.Role",
         name: "",
-        type: "string",
+        type: "uint8",
       },
     ],
     stateMutability: "view",
@@ -1245,7 +1343,7 @@ export const voteContractAbi = [
   },
 ] as const;
 
-export const nftContractAddress = "0x6385A2CCE2bef3A6BBf6888F9487254E6B7440aF";
-export const voteContractAddress = "0x5eA2d59169046A60BCEf0AF5658E54A6BA6C0283";
+export const nftContractAddress = "0x40A692f309f854F4Df9f435DBA75Af157f44FcC0";
+export const voteContractAddress = "0x8eB87DA1491827b74556055BA562EB8ae9a34797";
 export const rpcURL = "https://base-sepolia-rpc.publicnode.com";
 export const privateKey = Bun.env.PRIVATE_KEY!;

@@ -38,6 +38,10 @@ async function mintingNFT() {
                   trait_type: "program",
                   value: account.program.toLowerCase(),
                 },
+                {
+                  trait_type: "dpm",
+                  value: account.faculty.toLowerCase(),
+                },
               ],
             },
           ],
