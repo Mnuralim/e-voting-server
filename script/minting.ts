@@ -42,6 +42,12 @@ async function mintingNFT() {
                   trait_type: "dpm",
                   value: account.faculty.toLowerCase(),
                 },
+                {
+                  trait_type: "departement",
+                  value: account.departement
+                    ? account.departement.toLowerCase()
+                    : "none",
+                },
               ],
             },
           ],
@@ -63,6 +69,8 @@ async function mintingNFT() {
               account.faculty.toLowerCase(),
               account.program.toLowerCase(),
               imageUri,
+              account.departement ? account.departement.toLowerCase() : "none",
+              account.faculty.toLowerCase(),
             ],
           });
 
@@ -79,7 +87,7 @@ async function mintingNFT() {
             to: account.address,
             chain: baseSepolia,
             client: thirdwebClient,
-            value: toWei("0.001"),
+            value: toWei("0.0001"),
           });
 
           await sendAndConfirmTransaction({
