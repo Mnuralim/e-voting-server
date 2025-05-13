@@ -6,11 +6,13 @@ import cookieParser from "cookie-parser";
 import { whitelistRouter } from "./routes/whitelist";
 import { authRouter } from "./routes/auth";
 import { studentRouter } from "./routes/student";
+import helmet from "helmet";
 
 const app: Express = express();
 
 const apiVersion = "/api/v1";
 
+app.use(helmet());
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
