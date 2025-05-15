@@ -128,7 +128,6 @@ async function createFacultiesAndDepartments() {
     },
   ];
 
-  // Create departments first
   const departmentsToCreate = ["Jurusan MIPA", "Jurusan Pertanian"];
   const createdDepartments: Record<string, Departement> = {};
 
@@ -253,7 +252,6 @@ async function createStudents(data: {
     }
   }
 
-  // Handle any remaining students
   while (studentIndex < students.length) {
     const student = students[studentIndex];
     const randomProgramIndex = Math.floor(Math.random() * totalPrograms);
