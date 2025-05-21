@@ -10,11 +10,11 @@ services:
     depends_on:
       postgres_evoting_app:
         condition: service_healthy
-    env_file: ./e-voting-app/.env
+    env_file: .env
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres_evoting_app:5432/${POSTGRES_DB}
     volumes:
-      - ./e-voting-app/src:/app/src
+      - ./src:/app/src
     networks:
       - shared_network
     user: "1000:1000"
