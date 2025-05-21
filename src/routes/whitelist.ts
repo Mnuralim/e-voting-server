@@ -9,7 +9,7 @@ import { disableVoting } from "../middleware/disable-voting";
 
 const whitelistRouter: Router = Router();
 
-whitelistRouter.post("/", whitelistAddress);
+whitelistRouter.post("/",disableVoting, whitelistAddress);
 whitelistRouter.patch("/bulk", authentication, disableVoting, bulkAccessToken);
 whitelistRouter.patch(
   "/bulk/:id",
