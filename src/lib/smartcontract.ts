@@ -1343,7 +1343,7 @@ export const voteContractAbi = [
   },
 ] as const;
 
-export const nftContractAddress = "0xA463557aCdAE4bBE1ABaB4F3d83aE6d64147bf95";
-export const voteContractAddress = "0x1732273Cad91087F783818862e51EE1205B18986";
+export const nftContractAddress = "0x29ac72CafBB271Fe00FdC700Cd20328712D0de83";
+export const voteContractAddress = "0x30754c6bb428E5817F5c861528440A5Ca3BC4C12";
 export const rpcURL = "https://base-sepolia-rpc.publicnode.com";
 export const privateKey = Bun.env.PRIVATE_KEY!;
