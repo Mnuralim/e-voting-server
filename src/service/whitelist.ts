@@ -126,7 +126,11 @@ export const bulkAccessToken = async (role: string) => {
     if (role !== "admin" && role !== student.faculty.name.toLowerCase()) {
       throw new ApiError("Role tidak valid.", 400);
     }
-    const token = Math.random().toString(36).substring(2, 15);
+    const token = Math.random()
+      .toString(36)
+      .substring(2)
+      .padStart(5, "0")
+      .substring(0, 5);
     const tokenHash = await Bun.password.hash(token, {
       cost: 10,
       algorithm: "bcrypt",
@@ -172,7 +176,11 @@ export const createAccessToken = async (studentId: string, role: string) => {
     throw new ApiError("Access token sudah dibuat.", 400);
   }
 
-  const token = Math.random().toString(36).substring(2, 15);
+  const token = Math.random()
+    .toString(36)
+    .substring(2)
+    .padStart(5, "0")
+    .substring(0, 5);
   const tokenHash = await Bun.password.hash(token, {
     cost: 10,
     algorithm: "bcrypt",
